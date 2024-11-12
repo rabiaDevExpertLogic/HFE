@@ -13,7 +13,7 @@ export default function ContentSection({
     <section className={styles.ContentSec}>
       <Row className={styles.ContentMain}>
         {contentLeft && (
-          <Col>
+          <Col >
             <div className={styles.subtitle}>{contentLeft.subtitle}</div>
             <h2>{contentLeft.title}</h2>
             <p>{contentLeft.paragraph}</p>
@@ -42,7 +42,7 @@ export default function ContentSection({
             ></div>
         </Col>
         {contentRight && (
-          <Col>
+          <Col className="">
             <div className={styles.subtitle}>{contentRight.subtitle}</div>
             <h2>{contentRight.title}</h2>
             <p>{contentRight.paragraph}</p>

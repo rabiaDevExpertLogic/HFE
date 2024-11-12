@@ -13,7 +13,7 @@
 .ServiceMain .subtitle {
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 32px;
     text-align: start;
     letter-spacing: -0.01em;
     text-align: center;
@@ -33,11 +33,11 @@
     padding-top: 35px;
     margin: 0;
     --slide-height: 19rem;
-    --slide-spacing: 0;
-    --slide-size: 100%;
+    --slide-spacing: 15px;
+    /* --slide-size: 100%;
     --slide-spacing-sm: 1.7rem;
     --slide-size-sm: 50%;
-    --slide-spacing-lg: 2rem;
+    --slide-spacing-lg: 2rem; */
     --slide-size-lg: calc(100% / 3);
 }
 
@@ -49,15 +49,15 @@
     backface-visibility: hidden;
     display: flex;
     touch-action: pan-y pinch-zoom;
-    margin-left: calc(var(--slide-spacing) * -1);
+    /* margin-left: calc(var(--slide-spacing) * -1); */
 }
 
 .emblaSlide {
     /* min-width: 0; */
     flex: 0 0 33.33%;
     padding-left: var(--slide-spacing);
-    margin-left: 5px;
-    margin-right: 5px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
 }
 
 .card {
@@ -106,15 +106,213 @@
 }
 
 
+@media only screen and (min-width: 1200px) and (max-width: 1578px) {
+    .ServiceSec {
+        padding: 60px 0;
+    }
 
-/* .emblaSlideNumber {
-    box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-    border-radius: 1.8rem;
-    font-size: 4rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: var(--slide-height);
-    user-select: none;
-} */
+    .ServiceMain .subtitle {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .CardImg {
+        max-height: 240px;
+    }
+
+    .CardContent {
+        padding: 30px 20px;
+        ;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .ServiceSec {
+        padding: 40px 0;
+    }
+
+    .ServiceMain .subtitle {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+
+    .ServiceMain h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .CardImg {
+        max-height: 200px;
+    }
+
+    .CardContent {
+        padding: 30px 20px;
+    }
+
+    .CardContent h4 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .CardContent .Arrow {
+        width: 42px;
+        height: 35px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .ServiceSec {
+        padding: 40px 0;
+    }
+
+    .ServiceMain .subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+
+    .ServiceMain h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .embla {
+        padding-top: 25px;
+        --slide-spacing: 5px;
+    }
+
+    .CardImg {
+        max-height: 170px;
+    }
+
+    .CardContent {
+        padding: 20px 10px;
+    }
+
+    .CardContent h4 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .CardContent .Arrow {
+        width: 30px;
+        height: 25px;
+    }
+
+    .CardContent p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .ServiceSec {
+        padding: 40px 0;
+    }
+
+    .ServiceMain .subtitle {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+
+    .ServiceMain h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .embla {
+        padding: 25px 0 0 0;
+        --slide-spacing: 10px;
+        /* --slide-size-lg: calc(100% / 1); */
+    }
+
+    .emblaSlide {
+        /* min-width: 0; */
+        flex: 0 0 55%;
+    }
+
+    .CardImg {
+        max-height: 170px;
+    }
+
+    .CardContent {
+        padding: 20px 10px;
+    }
+
+    .CardContent h4 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .CardContent .Arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .CardContent p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .ServiceSec {
+        padding: 40px 0;
+    }
+
+    .ServiceMain .subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+
+    .ServiceMain h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .embla {
+        padding: 25px 0 0 0;
+        --slide-spacing: 10px;
+        /* --slide-size-lg: calc(100% / 1); */
+    }
+
+    .emblaSlide {
+        /* min-width: 0; */
+        flex: 0 0 100%;
+    }
+
+    .CardImg {
+        max-height: 220px;
+    }
+
+    .CardContent {
+        padding: 20px 10px;
+    }
+
+    .CardContent h4 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .CardContent .Arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .CardContent p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+}

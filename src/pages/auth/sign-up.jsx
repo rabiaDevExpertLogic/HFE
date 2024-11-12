@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import styles from "../../styles/layout/auth.module.css";
+import styles from "../../styles/pages/auth.module.css";
 import InputField from "../../components/input-field";
 import AppButton from "../../components/button";
 import { BsPersonCircle } from "react-icons/bs";
@@ -172,9 +172,9 @@ function SignUp() {
 
   return (
     <section className={styles.AuthSec}>
-      <Container fluid>
+      {/* <Container fluid> */}
         <Row className={styles.AuthMain}>
-          <Col md={6} className="h-100 p-0">
+          <Col md={6} className="h-100 p-0 d-none d-md-block">
             <div
               className={styles.AuthBG}
               style={{
@@ -185,7 +185,7 @@ function SignUp() {
           <Col md={6} className={styles.AuthFormMain}>
             <div className={styles.AuthForm}>
               {role && (
-                <div className="d-flex flex-column align-items-center w-75 mx-auto">
+                <div className="d-flex flex-column align-items-center w-lg-75 w-100 ">
                   <h4>Select your role</h4>
                   <button className={styles.roleBtn}>
                     <BsPersonCircle size={22} className="me-2" /> Service
@@ -204,7 +204,7 @@ function SignUp() {
                 </div>
               )}
               {signup && (
-                <div className="d-flex flex-column align-items-center justify-content-center py-5 w-75 mx-auto mt-5">
+                <div className={`${styles.signUpForm} py-5 mt-5`} >
                   <h4 className="mt-2 mb-0">Sign up</h4>
                   <p className="fs-6">Create an account to Service Provider!</p>
                   <div className="">
@@ -518,7 +518,7 @@ function SignUp() {
             </div>
           </Col>
         </Row>
-      </Container>
+      {/* </Container> */}
     </section>
   );
 }

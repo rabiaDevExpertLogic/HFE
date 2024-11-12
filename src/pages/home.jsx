@@ -72,7 +72,7 @@ const BannerList = [
 const content1 = {
   title: (
     <>
-      About Hope <br /> For EveryBody
+      About Hope <br className="d-none d-md-block" /> For EveryBody
     </>
   ),
   subtitle: "Tagline",
@@ -88,19 +88,13 @@ const content1 = {
     {
       heading: "SubHeading One",
       description: (
-        <>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </>
+        <>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
       ),
     },
     {
       heading: "SubHeading Two",
       description: (
-        <>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </>
+        <>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
       ),
     },
   ],
@@ -110,7 +104,7 @@ const content1 = {
 const content2 = {
   title: (
     <>
-      About Hope <br /> For EveryBody
+      About Hope <br className="d-none d-md-block" /> For EveryBody
     </>
   ),
   subtitle: "Tagline",
@@ -126,19 +120,13 @@ const content2 = {
     {
       heading: "SubHeading One",
       description: (
-        <>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </>
+        <>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
       ),
     },
     {
       heading: "SubHeading Two",
       description: (
-        <>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </>
+        <>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
       ),
     },
   ],
@@ -148,7 +136,7 @@ const content2 = {
 const content3 = {
   title: (
     <>
-      About Hope <br /> For EveryBody
+      About Hope <br className="d-none d-md-block" /> For EveryBody
     </>
   ),
   subtitle: "Tagline",
@@ -165,19 +153,13 @@ const content3 = {
     {
       heading: "SubHeading One",
       description: (
-        <>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </>
+        <>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
       ),
     },
     {
       heading: "SubHeading Two",
       description: (
-        <>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
-        </>
+        <>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</>
       ),
     },
   ],

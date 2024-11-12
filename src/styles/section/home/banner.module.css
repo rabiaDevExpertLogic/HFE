@@ -159,6 +159,10 @@
     padding: 20px 0 5px 0;
   }
 
+  .bannerMain {
+    padding: 100px 0 50px 0;
+  }
+
   .bannerMain h1 {
     font-size: 60px;
     line-height: 70px;
@@ -175,8 +179,10 @@
     padding: 20px 0 5px 0;
   }
 
+
+
   .bannerMain {
-    padding: 80px 10px;
+    padding: 80px 10px 20px 10px;
   }
 
   .bannerMain h1 {
@@ -185,7 +191,7 @@
   }
 
   .BannerImg {
-    height: 200px;
+    max-height: 250px;
     margin-top: 20px;
   }
 }

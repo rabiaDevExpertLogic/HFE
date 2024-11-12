@@ -4,6 +4,7 @@
 
 .ContentMain {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 15px
 }
@@ -91,7 +92,12 @@
         font-size: 16px;
         line-height: 24px;
     }
-} 
+
+    .ContentImg {
+        width: auto;
+        height: 450px;
+    }
+}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .ContentSec {
@@ -117,10 +123,167 @@
         font-size: 14px;
         line-height: 20px;
     }
+
+    .ContentImg {
+        width: auto;
+        height: 400px;
+    }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .ContentSec {
+        padding: 80px 0;
+    }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {}
+    .ContentMain {
+        gap: 0
+    }
 
-@media only screen and (max-width: 575px) {}
+    .ContentSec .subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .ContentSec h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .ContentSec p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+
+    .pointsDiv {
+        gap: 5px;
+    }
+
+    .pointsDiv h4 {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 0;
+    }
+
+    .points {
+        flex: 0 0 50%;
+    }
+
+    .points p {
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+
+    .ContentImg {
+        width: auto;
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .ContentSec {
+        padding: 50px 0;
+    }
+
+    .ContentMain {
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .ContentSec .subtitle {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .ContentSec h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .ContentSec p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+
+    .pointsDiv {
+        gap: 5px;
+    }
+
+    .pointsDiv h4 {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 0;
+    }
+
+    .points {
+        flex: 0 0 50%;
+    }
+
+    .points p {
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+
+    .ContentImg {
+        width: auto;
+        height: 300px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .ContentSec {
+        padding: 20px 0;
+    }
+
+    .ContentMain {
+        gap: 0;
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .ContentSec .subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .ContentSec h2 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .ContentSec p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+
+    .pointsDiv {
+        gap: 5px;
+    }
+
+    .pointsDiv h4 {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 0;
+    }
+
+    .points {
+        flex: 0 0 50%;
+    }
+
+    .points p {
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+
+    .ContentImg {
+        width: auto;
+        max-height: 250px;
+        margin-top: 20px;
+    }
+}

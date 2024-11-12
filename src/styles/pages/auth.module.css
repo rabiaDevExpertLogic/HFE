@@ -1,10 +1,13 @@
 .AuthSec {
     height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
 .AuthMain {
     height: 100dvh;
     padding: 0;
+    margin: 0;
     width: 100%;
 }
 
@@ -43,6 +46,17 @@
 .AuthForm {
     width: 550px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signUpForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
 }
 
 .Logo {
@@ -165,3 +179,55 @@ p {
     height: 170px;
     border-radius: 8px;
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1578px) {
+    .signUpForm{
+        width: 450px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .AuthForm {
+        width: 450px;
+        margin: auto;
+    }
+    .signUpForm{
+        width: 420px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .AuthForm {
+        width: 450px;
+        margin: auto;
+    }
+    .signUpForm{
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .AuthForm {
+        width: 500px;
+        margin: auto;
+    }
+    .signUpForm{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .Logo {
+        height: 40px;
+    }
+
+    .AuthForm {
+        max-width: 100%;
+        margin: auto;
+        padding: 0 10px;
+    }
+    .signUpForm{
+        width: auto;
+    }
+} 

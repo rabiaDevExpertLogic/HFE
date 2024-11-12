@@ -35,7 +35,7 @@ export default function AppLayout({ children }) {
 
         <Content
           style={{
-            margin: 0,
+            margin: `0 auto`,
             padding: `0`,
             width: "100%",
             height: "auto",

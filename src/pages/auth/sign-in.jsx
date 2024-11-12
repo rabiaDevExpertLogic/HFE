@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import styles from "../../styles/layout/auth.module.css";
+import styles from "../../styles/pages/auth.module.css";
 import authBG from "../../assets/auth/authBG.jpg";
 import InputField from "../../components/input-field";
 import AppButton from "../../components/button";
@@ -36,9 +36,9 @@ function SignIn() {
 
   return (
     <section className={styles.AuthSec}>
-      <Container fluid>
+      {/* <Container fluid> */}
         <Row className={styles.AuthMain}>
-          <Col md={6} className="h-100 p-0">
+          <Col md={6} className="h-100 p-0 d-none d-md-block">
             <div
               className={styles.AuthBG}
               style={{
@@ -46,7 +46,7 @@ function SignIn() {
               }}
             ></div>
           </Col>
-          <Col md={6} className="d-flex flex-column position-relative">
+          <Col md={6} className="d-flex p-0 flex-column position-relative">
             <div className={styles.AuthForm}>
               {login && (
                 <>
@@ -192,7 +192,7 @@ function SignIn() {
             </div>
           </Col>
         </Row>
-      </Container>
+      {/* </Container> */}
     </section>
   );
 }

@@ -27,16 +27,16 @@ export default function Footer() {
               <h5>Column One</h5>
               <ul>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
               </ul>
             </div>
@@ -44,16 +44,16 @@ export default function Footer() {
               <h5>Column Two</h5>
               <ul>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
               </ul>
             </div>
@@ -61,16 +61,16 @@ export default function Footer() {
               <h5>Column Three</h5>
               <ul>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
                 <li>
-                  <a>Lorem ipsum dolor</a>
+                  Lorem ipsum dolor
                 </li>
               </ul>
             </div>
