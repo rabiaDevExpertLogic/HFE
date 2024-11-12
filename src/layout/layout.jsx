@@ -58,7 +58,7 @@ export default function AppLayout({ children }) {
             backgroundSize: "cover",
           }}
         >
-          {/* {!shouldHideFooter && <AppFooter />} */}
+          {!shouldHideFooter && <AppFooter />}
         </Footer>
       </Layout>
     </>

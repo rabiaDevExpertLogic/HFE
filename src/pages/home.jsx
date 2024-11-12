@@ -253,12 +253,12 @@ export default function Home() {
             contentLeft={content3}
             BannerImg="https://placehold.co/600x400/grey/white"
           />
-          {/* <Service
+          <Service
             data={ServiceData}
             slides={ServiceList}
             options={ServiceOption}
           />
-          <Faq faqs={faqs} /> */}
+          <Faq faqs={faqs} />
         </Row>
       </Container>
     </section>
