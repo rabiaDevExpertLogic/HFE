@@ -5,9 +5,11 @@ import authBG from "../../assets/auth/authBG.jpg";
 import InputField from "../../components/input-field";
 import AppButton from "../../components/button";
 import OTPInput from "../../components/otpField";
-import { FaEye } from "react-icons/fa";
+import AppLogo from "../../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
+  const navigate = useNavigate();
   const [login, setLogin] = useState(true);
   const [forgetpassword, setForgetPassword] = useState(false);
   const [showOtp, setShowOtp] = useState(false);
@@ -44,7 +46,7 @@ function SignIn() {
               }}
             ></div>
           </Col>
-          <Col md={6} className="d-flex">
+          <Col md={6} className="d-flex flex-column position-relative">
             <div className={styles.AuthForm}>
               {login && (
                 <>
@@ -93,7 +95,14 @@ function SignIn() {
 
                   <div className={styles.AuthFormContent}>
                     <p>
-                      Don't have an account? <span>Sign Up</span>
+                      Don't have an account?{" "}
+                      <span
+                        onClick={() => {
+                          navigate("/sign-up");
+                        }}
+                      >
+                        Sign Up
+                      </span>
                     </p>
                   </div>
                 </>
@@ -163,9 +172,23 @@ function SignIn() {
                     className="w-100"
                   />
 
-                  <AppButton width="100%" title="Set Password" background="#141416" className="mt-3" />
+                  <AppButton
+                    width="100%"
+                    title="Set Password"
+                    background="#141416"
+                    className="mt-3"
+                  />
                 </>
               )}
+            </div>
+            <div
+              className="position-absolute start-50 translate-middle"
+              style={{ top: "70px" }}
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              <img src={AppLogo} className={` ${styles.Logo} `} />
             </div>
           </Col>
         </Row>

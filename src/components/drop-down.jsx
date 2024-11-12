@@ -11,6 +11,8 @@ export default function Dropdown(props) {
     className,
     disabled,
     width,
+    list,
+    listID,
   } = props;
   return (
     <div className="py-2 w-100">
@@ -42,7 +44,7 @@ export default function Dropdown(props) {
           alignItems: "center ",
         }}
       >
-        <select
+        {/* <select
           id="cars"
           style={{
             background: "none",
@@ -58,6 +60,22 @@ export default function Dropdown(props) {
           <option value="audi" selected>
             Audi
           </option>
+        </select> */}
+        <select
+          id={listID}
+          style={{
+            background: "none",
+            border: "none",
+            outline: "none",
+            width: "100%",
+            height: "45px",
+          }}
+        >
+          {list.map((x, i) => (
+            <option key={i} value={x.value} selected={x.selected}>
+              {x.label}
+            </option>
+          ))}
         </select>
       </div>
     </div>

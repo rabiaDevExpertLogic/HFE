@@ -16,6 +16,7 @@ import TextArea from "../../components/textarea";
 import { FaFilePdf } from "react-icons/fa6";
 import AppLogo from "../../assets/logo.svg";
 import { GrUploadOption } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
 
 const contactNumber = [
   {
@@ -69,7 +70,76 @@ const contactNumber = [
   },
 ];
 
+const category = [
+  {
+    value: "service-providers",
+    label: "Service Providers",
+    selected: true,
+  },
+  {
+    value: "housing",
+    label: "Housing",
+  },
+  {
+    value: "healthcare",
+    label: "Healthcare",
+  },
+  {
+    value: "plumbers",
+    label: "Plumbers",
+  },
+];
+
+const subCategory = [
+  {
+    value: "employment",
+    label: "Employment",
+    selected: true,
+  },
+  {
+    value: "housing",
+    label: "Housing",
+  },
+  {
+    value: "healthcare",
+    label: "Healthcare",
+  },
+  {
+    value: "service-providers",
+    label: "Service Providers",
+  },
+  {
+    value: "plumbers",
+    label: "Plumbers",
+  },
+];
+
+const offered = [
+  {
+    value: "no",
+    label: "No",
+    selected: true,
+  },
+  {
+    value: "yes",
+    label: "Yes",
+  },
+];
+
+const language = [
+  {
+    value: "english",
+    label: "English",
+    selected: true,
+  },
+  {
+    value: "spanish",
+    label: "Spanish",
+  },
+];
+
 function SignUp() {
+  const navigate = useNavigate();
   const [role, setRole] = useState(true);
   const [signup, setSignup] = useState(false);
   const [selectedOption, setSelectedOption] = useState("company");
@@ -134,8 +204,7 @@ function SignUp() {
                 </div>
               )}
               {signup && (
-                <div className="d-flex flex-column align-items-center justify-content-center py-5 w-75 mx-auto">
-                  <img src={AppLogo} className={styles.Logo} />
+                <div className="d-flex flex-column align-items-center justify-content-center py-5 w-75 mx-auto mt-5">
                   <h4 className="mt-2 mb-0">Sign up</h4>
                   <p className="fs-6">Create an account to Service Provider!</p>
                   <div className="">
@@ -208,21 +277,21 @@ function SignUp() {
                     className={styles.FileUpload}
                     label={
                       <p className="text-start">
-                        company logo upload <br /> maximum file size is 40mb
+                        company logo upload <br /> maximum file size is 5mb
                       </p>
                     }
                   >
                     <img src="https://learn.starlegacyfoundation.org/wp-content/plugins/tutor/assets/images/placeholder.svg" />
                   </FileUpload>
 
-                  <Dropdown label="Select Category" />
+                  <Dropdown list={category} label="Select Category" />
 
-                  <Dropdown label="Sub Category" />
+                  <Dropdown list={subCategory} label="Sub Category" />
 
                   <InputField
                     label="Tax ID Number*"
                     type="text"
-                    placeholder="982958195"
+                    placeholder="000-000-0000"
                     required="true"
                   />
 
@@ -244,18 +313,18 @@ function SignUp() {
                   <InputField
                     label="Address*"
                     type="text"
-                    placeholder="Fort Worth, Tx"
+                    placeholder="Address"
                     required="true"
                   />
 
                   <InputField
-                    label="Address2*"
+                    label="Address2"
                     type="text"
-                    placeholder="Fort Worth, Tx, USA"
+                    placeholder="Address"
                     required="true"
                   />
 
-                  <Dropdown label="Work with sex Offenders" />
+                  <Dropdown list={offered} label="Work with sex Offenders" />
 
                   <div className="py-2 w-100">
                     <div
@@ -269,7 +338,7 @@ function SignUp() {
                         textTransform: "capitalize",
                       }}
                     >
-                      Social Media Links*
+                      Social Media Links
                     </div>
                     <div
                       style={{
@@ -325,13 +394,13 @@ function SignUp() {
                   </div>
 
                   <InputField
-                    label="Website Link*"
+                    label="Website Link"
                     type="text"
                     placeholder="https://websitelink.com"
                     required="true"
                   />
 
-                  <InputField
+                  {/* <InputField
                     label="City*"
                     type="text"
                     placeholder="TX, USA"
@@ -343,7 +412,7 @@ function SignUp() {
                     type="text"
                     placeholder="Texas, USA"
                     required="true"
-                  />
+                  /> */}
 
                   <InputField
                     label="Country*"
@@ -360,20 +429,20 @@ function SignUp() {
                   />
 
                   <InputField
-                    label="Enter Password"
+                    label="Enter Password*"
                     type="password"
                     placeholder="*****"
                     required="true"
                   />
 
                   <InputField
-                    label="Confirm Password"
+                    label="Confirm Password*"
                     type="password"
                     placeholder="*****"
                     required="true"
                   />
 
-                  <Dropdown label="Select Language" />
+                  <Dropdown list={language} label="Select Language" />
 
                   <TextArea
                     label="organization Products*"
@@ -393,12 +462,12 @@ function SignUp() {
                   <FileUpload label="Upload Bussiness Proof" className="w-100">
                     <div className="d-flex align-items-center">
                       <div
-                        className="w-25 text-center p-2 border text-white d-flex align-items-center"
+                        className="w-25 text-center p-2 border text-white d-flex align-items-center justify-content-center"
                         style={{
                           background: "#141416",
                           borderTopLeftRadius: "5px",
                           borderBottomLeftRadius: "5px",
-                          fontSize: "14px",
+                          fontSize: "12px",
                         }}
                       >
                         {" "}
@@ -426,11 +495,27 @@ function SignUp() {
 
                   <div className={styles.AuthFormContent}>
                     <p>
-                      Already have an Accout <span>Log In</span>
+                      Already have an Accout{" "}
+                      <span
+                        onClick={() => {
+                          navigate("/sign-in");
+                        }}
+                      >
+                        Log In
+                      </span>
                     </p>
                   </div>
                 </div>
               )}
+            </div>
+            <div
+              className="position-absolute start-50 translate-middle"
+              style={{ top: "70px" }}
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              <img src={AppLogo} className={` ${styles.Logo} `} />
             </div>
           </Col>
         </Row>

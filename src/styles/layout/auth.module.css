@@ -37,6 +37,7 @@
     height: 100dvh;
     overflow: auto;
     display: flex;
+    position: relative;
 }
 
 .AuthForm {
@@ -45,7 +46,7 @@
 }
 
 .Logo {
-    height: 40px;
+    height: 60px;
 }
 
 .AuthFormContent {

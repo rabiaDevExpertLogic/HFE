@@ -66,13 +66,13 @@ export default function AppHeader() {
                 </Link>
                 <Link
                   className={`d-none d-md-block ${styles.headerItem} `}
-                  to="/about"
+                  to="#"
                 >
                   About us
                 </Link>
                 <Link
                   className={`d-none d-md-block ${styles.headerItem}`}
-                  to="/contact"
+                  to="#"
                 >
                   Contact
                 </Link>
