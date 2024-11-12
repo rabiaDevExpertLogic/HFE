@@ -470,7 +470,6 @@ function SignUp() {
                           fontSize: "12px",
                         }}
                       >
-                        {" "}
                         UPLOAD <GrUploadOption size={14} className="ms-1" />
                       </div>
                       <div
