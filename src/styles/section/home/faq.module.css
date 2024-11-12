@@ -1,0 +1,58 @@
+.FaqSec {
+    padding: 80px 0;
+}
+
+.card {
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   margin-bottom: 15px;
+   overflow: hidden;
+   padding: 0;
+}
+
+.card:last-child {
+   margin-bottom: 0;
+}
+
+.cardToggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    background-color: #ebedf0;
+    transition: 0.3s ease-in;
+    padding: 10px 15px;
+    width: 100%;
+ }
+
+ .cardToggle h5 {
+margin: auto 0;
+ }
+
+ .cardToggle .active{
+    transition: 0.3s ease-out;
+ }
+
+ .cardToggle h5 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #141416;
+}
+
+.cardToggleBody {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 15px;
+ }
+
+.cardToggleBody p {
+    font-family: 'Poppins', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	color: #000000;
+ }

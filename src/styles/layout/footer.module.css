@@ -1,0 +1,87 @@
+.footerSec {
+    background: #f2f2f2;
+    padding: 65px 0 45px 0;
+}
+
+.footerDiv {
+    display: flex;
+    width: 100%;
+}
+
+.footerLogo {
+    width: auto;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.storeLogo {
+    display: flex;
+    gap: 10px;
+}
+
+.storeLogo img {
+    height: 35px;
+}
+
+.footerItem {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.footerItem h5 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    color: #363940;
+}
+
+.footerItem p {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #363940;
+}
+
+.footerItem:nth-child(1) {
+    flex: 0 0 40%;
+    align-items: start;
+}
+
+.footerItem:nth-child(2) {
+    flex: 0 0 20%;
+
+}
+
+.footerItem:nth-child(3) {
+    flex: 0 0 20%;
+
+}
+
+.footerItem:nth-child(4) {
+    flex: 0 0 20%;
+}
+
+.footerItem ul {
+    padding: 0;
+}
+
+.footerItem ul li {
+    list-style: none;
+}
+
+.footerItem ul li a {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #363940;
+}

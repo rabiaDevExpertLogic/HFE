@@ -1,0 +1,166 @@
+.AuthSec {
+    height: 100vh;
+}
+
+.AuthMain {
+    height: 100dvh;
+    padding: 0;
+    width: 100%;
+}
+
+.AuthBG {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100dvh;
+    position: relative;
+    z-index: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AuthBG::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0, 0.2);
+    z-index: 0;
+}
+
+.AuthFormMain {
+    height: 100dvh;
+    overflow: auto;
+    display: flex;
+}
+
+.AuthForm {
+    width: 550px;
+    margin: auto;
+}
+
+.Logo {
+    height: 40px;
+}
+
+.AuthFormContent {
+    border: 1px solid transparent;
+    border-top-color: #ddd;
+    width: 100%;
+    margin-top: 35px;
+    padding-top: 25px;
+    text-align: center;
+    font-style: normal;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 136.02%;
+    color: #27272E;
+    text-align: center;
+
+}
+
+p {
+    color: #425466;
+}
+
+.AuthFormContent p span {
+    font-weight: 500;
+    color: #141416;
+}
+
+.otp-input {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: #141416;
+}
+
+.roleBtn {
+    background: #EDF2F7;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    color: #141416;
+    font-weight: 500;
+    box-shadow: none;
+    border: none;
+    margin: 10px 0;
+}
+
+.roleBtn:hover {
+    border: 1px solid #141416
+}
+
+.profile {
+    position: relative;
+    margin: 10px 0 20px 0;
+    border-radius: 8px;
+}
+
+.profile::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.profile img {
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.profileEdit {
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    z-index: 1;
+    border: 1px solid #141416;
+    background: #141416;
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FileUpload {
+    height: 170px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.FileUpload img {
+    width: 100%;
+    height: 170px;
+    border-radius: 8px;
+}
