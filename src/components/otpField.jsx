@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import baseColor from "../config/color";
 
 const OTPInput = ({ length = 4, onComplete }) => {
   const inputRef = useRef(Array(length).fill(null));
@@ -36,7 +37,7 @@ const OTPInput = ({ length = 4, onComplete }) => {
           ref={(ref) => (inputRef.current[index] = ref)}
           style={{
             flex: `0 0 23%`,
-            background: `#EDF2F7`,
+            background: baseColor.lightGrey,
             borderRadius: `6px`,
             height: "45px",
             width: "100%",

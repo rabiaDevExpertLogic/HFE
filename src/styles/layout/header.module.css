@@ -1,5 +1,7 @@
 /* Header styles */
 .headerDiv {
+    /* background: #E6E8EC; */
+    /* background: rgb(230, 242, 255); */
     background: #fff;
     padding: 12px 0;
 }
@@ -14,9 +16,9 @@
 
 .headerItem {
     color: #777E91;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Inter", sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 16px;
     text-decoration: none;
@@ -24,27 +26,138 @@
 }
 
 .headerItem:hover {
-    color: #141416
+    color: #0c2340;
+    font-weight: 500;
 }
 
-.headerItem:active {
-    color: #141416
+.headerLogo2 {
+    width: auto;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerItem2 {
+    color: #777E91;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration: none;
+    margin: auto 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.headerItem2:hover {
+    color: #0c2340;
+    font-weight: 500;
+}
+
+.active {
+    color: #0c2340;
+    font-weight: 500;
 }
 
 .HeaderBtn {
-    font-family: 'DM Sans';
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 00;
     font-size: 14px;
     line-height: 16px;
 }
 
-.headerItem2 {
-    color: white;
-    font-weight: 300;
-    /* font-size: 1.4rem; */
-    font-family: Teko, sans-serif;
-    height: 8vh;
-    /* letter-spacing: 0.1rem; */
-    text-decoration: none;
+
+
+.Toggle {
+    display: flex;
+    flex-direction: column;
+    width: 23px;
+    cursor: pointer;
+}
+
+.toggleLine {
+    background: #0c2340;
+    border-radius: 10px;
+    height: 2px;
+    margin: 2px 0;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+}
+
+.Toggle .toggleLine:nth-of-type(1) {
+    width: 50%;
+
+}
+
+.Toggle .toggleLine:nth-of-type(2) {
+    width: 100%;
+}
+
+
+.Toggle .toggleLine:nth-of-type(3) {
+    width: 75%;
+
+}
+
+
+.toggleActive .toggleLine:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(2px, 0px)
+}
+
+
+.toggleActive .toggleLine:nth-of-type(2) {
+
+    transform-origin: top;
+    transform: rotatez(-45deg)
+}
+
+
+.toggleActive .toggleLine:nth-of-type(3) {
+
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(9px, -3px) rotatez(45deg);
+
+}
+
+.sideBar {
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 320px !important;
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .headerLogo {
+        height: 40px;
+    }
+
+    .sideBar {
+        width: 350px !important;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .headerLogo {
+        height: 35px;
+    }
+
+    .sideBar {
+        width: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .headerLogo {
+        height: 30px;
+    }
+
+    .sideBar {
+        width: 250px !important;
+    }
 }

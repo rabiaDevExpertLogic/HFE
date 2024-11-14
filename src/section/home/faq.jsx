@@ -5,7 +5,7 @@ import { FaMinus } from "react-icons/fa6";
 import styles from "../../styles/section/home/faq.module.css";
 
 function Faq({faqs}) {
-  const [active, setActive] = useState(1); // Using active state for accordion toggle
+  const [active, setActive] = useState(0); // Using active state for accordion toggle
 
   const handleToggle = (index) => {
     if (active === index) {

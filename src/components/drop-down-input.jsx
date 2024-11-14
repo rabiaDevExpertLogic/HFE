@@ -1,4 +1,5 @@
 import React from "react";
+import baseColor from "../config/color";
 
 export default function DropdownInput(props) {
   const {
@@ -23,7 +24,7 @@ export default function DropdownInput(props) {
             fontWeight: 500,
             fontSize: "14px",
             lineHeight: "24px",
-            color: "#425466",
+            color: baseColor.darkGrey,
             marginBottom: "8px",
             textTransform: "capitalize",
           }}
@@ -34,7 +35,7 @@ export default function DropdownInput(props) {
 
       <div
         style={{
-          background: `#EDF2F7`,
+          background: baseColor.lightGrey,
           borderRadius: `6px`,
           height: "45px",
           // width: width ? width : "100%",

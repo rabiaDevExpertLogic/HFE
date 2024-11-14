@@ -86,19 +86,11 @@
 
 .bannerMain h1 {
   font-weight: 700;
-  font-size: 80px;
-  line-height: 90px;
+  font-size: 60px;
+  line-height: 70px;
   letter-spacing: -0.02em;
+  color: #0c2340;
 }
-
-/* .bannerMain p {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-} */
 
 .BannerImg {
   background-position: center;
@@ -115,8 +107,8 @@
   }
 
   .bannerMain h1 {
-    font-size: 80px;
-    line-height: 90px;
+    font-size: 60px;
+  line-height: 70px;
   }
 
   .BannerImg {
@@ -130,8 +122,8 @@
   }
 
   .bannerMain h1 {
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .BannerImg {
@@ -145,8 +137,8 @@
   }
 
   .bannerMain h1 {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 50px;
   }
 
   .BannerImg {
@@ -164,8 +156,8 @@
   }
 
   .bannerMain h1 {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 50px;
+    line-height: 60px;
   }
 
   .BannerImg {
@@ -186,8 +178,8 @@
   }
 
   .bannerMain h1 {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 35px;
+    line-height: 45px;
   }
 
   .BannerImg {

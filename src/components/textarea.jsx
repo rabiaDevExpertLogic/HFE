@@ -1,4 +1,5 @@
 import React from "react";
+import baseColor from "../config/color";
 
 export default function TextArea(props) {
   const {
@@ -10,10 +11,15 @@ export default function TextArea(props) {
     placeholder,
     className,
     disabled,
-    width
+    width,
+    horizental,
   } = props;
   return (
-    <div className="py-2 w-100">
+    <div
+      className={
+        horizental === true ? "d-flex align-item-center mb-3" : "py-2 w-100"
+      }
+    >
       {label && (
         <div
           style={{
@@ -21,9 +27,10 @@ export default function TextArea(props) {
             fontWeight: 500,
             fontSize: "14px",
             lineHeight: "24px",
-            color: "#425466",
-            marginBottom: "8px",
+            color: baseColor.darkGrey,
+            margin: horizental === true ? "0px" : "0 0 8px 0",
             textTransform: "capitalize",
+            width: horizental === true ? "250px" : "auto",
           }}
         >
           {label}
@@ -39,7 +46,7 @@ export default function TextArea(props) {
         className={className}
         rows="5"
         style={{
-          background: `#EDF2F7`,
+          background: baseColor.lightGrey,
           borderRadius: `6px`,
           width: width ? width : "100%",
           border: "none",

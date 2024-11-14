@@ -1,0 +1,163 @@
+.contactSec {
+    margin-top: 35px;
+}
+
+/* .contactMain {} */
+
+.contactBanner {
+    background-position: auto center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactBanner::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(30, 41, 59, 0.8);
+}
+
+.contactBannerContent {
+    position: absolute;
+}
+
+.contactBannerContent .subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: start;
+    letter-spacing: -0.01em;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.contactBannerContent h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: white;
+}
+
+.contactBannerContent p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.contactFormMain {
+    margin: auto;
+    margin-top: -55px;
+    z-index: 1;
+    background: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+}
+
+.contactForm {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 55px;
+}
+
+.contactForm h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    color: #0c2340;
+    text-align: start;
+}
+
+.Form {
+    border: 1px solid transparent;
+    border-top-color: #ccc;
+    padding: 25px 0;
+}
+
+.info {
+    display: flex;
+}
+
+.info .infoSvg {
+    height: 25px;
+    width: 50px;
+}
+
+.info h5 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0c2340;
+    text-align: start;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1578px) {
+    .contactForm h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .info h5 {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .contactForm h3 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .info h5 {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contactForm h3 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .info h5 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .contactForm h3 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .info h5 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 575px) {}

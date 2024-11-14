@@ -19,7 +19,7 @@
    align-items: center;
    cursor: pointer;
    justify-content: space-between;
-   background-color: #ebedf0;
+   background-color: #f1f3f7;
    transition: 0.3s ease-in;
    padding: 10px 15px;
    width: 100%;
@@ -39,7 +39,7 @@
    font-weight: 600;
    font-size: 16px;
    line-height: 26px;
-   color: #141416;
+   color: #0c2340;
 }
 
 .cardToggleBody {

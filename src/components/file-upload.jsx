@@ -1,4 +1,5 @@
 import React from "react";
+import baseColor from "../config/color";
 
 export default function FileUpload(props) {
   const { onChange, value, className, disabled, children, label } = props;
@@ -12,7 +13,7 @@ export default function FileUpload(props) {
             fontWeight: 500,
             fontSize: "14px",
             lineHeight: "24px",
-            color: "#425466",
+            color: baseColor.darkGrey,
             marginBottom: "8px",
             textTransform: "capitalize",
           }}

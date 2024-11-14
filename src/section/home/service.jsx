@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Col, Container, Row } from "react-bootstrap";
 import AppButton from "../../components/button";
 import { IoIosArrowForward } from "react-icons/io";
+import baseColor from "../../config/color";
 
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
@@ -36,7 +37,7 @@ export default function Service({ data, slides, options }) {
                           <AppButton
                             title={item.buttonText}
                             //   onClick={() => navigate("/")}
-                            background="#141416"
+                            background={baseColor.primaryColor}
                             // to=""
                           />
                         </div>

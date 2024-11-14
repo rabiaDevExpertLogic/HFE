@@ -3,6 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import styles from "../../styles/section/home/banner.module.css";
 import { Col, Row } from "react-bootstrap";
 import AppButton from "../../components/button";
+import baseColor from "../../config/color";
 
 
 const Banner = ({ slides, options }) => {
@@ -23,7 +24,7 @@ const Banner = ({ slides, options }) => {
                     <p>{slide.description}</p>
                     <AppButton
                       title={slide.buttonText || "Learn More"} 
-                      background="#141416"
+                      background={baseColor.primaryColor}
                     />
                   </Col>
                   <Col md={6}>

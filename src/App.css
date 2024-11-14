@@ -1,7 +1,7 @@
 #root {
 	text-size-adjust: 100%;
 	letter-spacing: normal;
-	background-color: white;
+	background-color: #f8f4ec ;
 	margin: 0 auto;
 	width: 100%;
 }
@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "DM Sans", sans-serif;
+	font-family: "Inter", sans-serif;
 	font-style: normal;
 }
 
@@ -44,6 +44,10 @@ p {
 	font-size: 16px;
 	line-height: 24px;
 	color: #000000;
+}
+
+.offcanvas-backdrop {
+	display: none;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1578px) {

@@ -3,47 +3,29 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { TbWorld } from "react-icons/tb";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { TfiWorld } from "react-icons/tfi";
 import styles from "../styles/layout/header.module.css"; // Correct import for CSS modules
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import AppButton from "../components/button";
 import AppLogo from "../assets/logo.svg";
+import baseColor from "../config/color";
+import { GoPerson } from "react-icons/go";
+import { LiaHomeSolid } from "react-icons/lia";
+import { BiPhone } from "react-icons/bi";
+import { LuMenuSquare } from "react-icons/lu";
 
 export default function AppHeader() {
   const navigate = useNavigate();
-  const [colorHover, setcolorHover] = useState(false);
-  const [colorChange, setColorchange] = useState(false);
+  const location = useLocation();
+  const [show, setShow] = useState(false);
 
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 300) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const isActive = (path) => {
+    return location.pathname === path ? styles.active : "";
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNavbarColor);
-    return () => {
-      window.removeEventListener("scroll", changeNavbarColor);
-    };
-  }, []);
-
-  const handleResize = () => {
-    if (window.innerWidth < 992) {
-      setColorchange(true);
-    } else {
-      setColorchange(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <div>
@@ -53,46 +35,70 @@ export default function AppHeader() {
           variant="light"
         >
           <Container className="p-0">
-            <Nav className="d-flex justify-content-between align-items-center gap-4  w-100">
+            <Nav className="d-flex justify-content-evenly justify-content-sm-between align-items-center gap-4  w-100">
               <Navbar.Brand href="#home" className={styles.headerLogoDiv}>
                 <img src={AppLogo} className={styles.headerLogo} />
               </Navbar.Brand>
               <Nav className="d-flex  justify-content-end align-items-center ">
                 <Link
-                  className={`d-none d-md-block ${styles.headerItem}`}
+                  className={`d-none d-lg-block ${styles.headerItem} ${isActive(
+                    "/"
+                  )}`}
                   to="/"
                 >
                   Home
                 </Link>
                 <Link
-                  className={`d-none d-md-block ${styles.headerItem} `}
-                  to="#"
+                  className={`d-none d-lg-block ${styles.headerItem} ${isActive(
+                    "/about"
+                  )}`}
+                  to="/about"
                 >
                   About us
                 </Link>
                 <Link
-                  className={`d-none d-md-block ${styles.headerItem}`}
-                  to="#"
+                  className={`d-none d-lg-block ${styles.headerItem} ${isActive(
+                    "/contact-us"
+                  )}`}
+                  to="/contact-us"
                 >
                   Contact
                 </Link>
               </Nav>
               <Nav className="d-flex  justify-content-end align-items-center ">
-                <TbWorld color="#141416" size={24} />
+                <TfiWorld color={baseColor.primaryColor} size={20} />
+                <GoPerson
+                  color={baseColor.primaryColor}
+                  size={20}
+                  className={`d-block d-lg-none ms-2`}
+                  onClick={() => navigate("/sign-in")}
+                />
+                <div
+                  className={`d-lg-none ms-2 ${styles.Toggle} ${
+                    show ? styles.toggleActive : ""
+                  }`}
+                  onClick={() => {
+                    setShow(!show);
+                  }}
+                >
+                  <span className={styles.toggleLine}></span>
+                  <span className={styles.toggleLine}></span>
+                  <span className={styles.toggleLine}></span>
+                </div>
+
                 <AppButton
                   title="Sign In"
                   onClick={() => navigate("/sign-in")}
-                  background="#141416"
-                  className={`d-none d-lg-block ${styles.HeaderBtn} mx-2`}
-                  // to=""
+                  background={baseColor.primaryColor}
+                  className={`d-none d-lg-flex ${styles.HeaderBtn} mx-2`}
                 />
                 <AppButton
                   title="Sign Up"
                   onClick={() => navigate("/sign-up")}
                   background="transparent"
-                  color="#141416"
-                  border="0.5px solid #141416"
-                  className={`d-none d-lg-block ${styles.HeaderBtn}`}
+                  color={baseColor.primaryColor}
+                  border={`0.5px solid ${baseColor.primaryColor}`}
+                  className={`d-none d-lg-flex ${styles.HeaderBtn}`}
 
                   // to=""
                 />
@@ -100,66 +106,33 @@ export default function AppHeader() {
             </Nav>
           </Container>
         </Navbar>
-        {/* <Navbar
-          bg="dark"
-          data-bs-theme="dark"
-          collapseOnSelect
-          expand="lg"
-          className="bg-body-tertiary d-block d-md-none text-white mx-3 px-2 mt-1 mb-0 py-0"
-          style={{ top: -15, backgroundColor: "#4c4c4c", borderRadius: "2px" }}
-        >
-          <Container className="py-3 justify-content-end">
-            <Navbar.Toggle aria-controls="responsive-navbar-nav " />
-            <Navbar.Collapse id="responsive-navbar-nav" className="mb-5 pt-0">
-              <Nav className="me-auto ">
-                <Nav.Link
-                  className={styles.headerItem2}
-                  onClick={() => navigate("/")}
-                >
-                  Home
-                </Nav.Link>
-                <Nav.Link
-                  className={styles.headerItem2}
-                  onClick={() => navigate("/about")}
-                >
-                  About
-                </Nav.Link>
-                <Nav.Link
-                  className={styles.headerItem2}
-                  onClick={() => navigate("/service")}
-                >
-                  Service
-                </Nav.Link>
-                <Nav.Link
-                  className={styles.headerItem2}
-                  onClick={() => navigate("/schedule")}
-                >
-                  Schedule
-                </Nav.Link>
-                <Nav.Link
-                  className={styles.headerItem2}
-                  onClick={() => navigate("/gallery")}
-                >
-                  Gallery
-                </Nav.Link>
-                <Nav.Link
-                  className={styles.headerItem2}
-                  onClick={() => navigate("/blog")}
-                >
-                  Blog
-                </Nav.Link>
-                <Nav.Link
-                  className={styles.headerItem2}
-                  onClick={() => navigate("/contact")}
-                  // className="mb-3"
-                >
-                  Contact
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar> */}
       </div>
+      <Offcanvas show={show} className={styles.sideBar}>
+        <Offcanvas.Header>
+          <Offcanvas.Title>
+            <img src={AppLogo} className={styles.headerLogo2} />
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Nav className="d-flex flex-column justify-content-center py-3 align-items-start ">
+            <Link className={`${styles.headerItem2} ${isActive("/")}`} to="/">
+              <LiaHomeSolid className="me-3" size={22} /> Home
+            </Link>
+            <Link
+              className={`${styles.headerItem2} ${isActive("/about")}`}
+              to="/about"
+            >
+              <LuMenuSquare className="me-3" size={18} />About us
+            </Link>
+            <Link
+              className={`${styles.headerItem2} ${isActive("/contact-us")}`}
+              to="/contact-us"
+            >
+              <BiPhone className="me-3" size={22} /> Contact
+            </Link>
+          </Nav>
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 }

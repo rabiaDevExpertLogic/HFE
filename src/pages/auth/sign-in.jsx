@@ -7,6 +7,7 @@ import AppButton from "../../components/button";
 import OTPInput from "../../components/otpField";
 import AppLogo from "../../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
+import baseColor from "../../config/color";
 
 function SignIn() {
   const navigate = useNavigate();
@@ -78,7 +79,7 @@ function SignIn() {
                         fontWeight: 400,
                         fontSize: "14px",
                         lineHeight: "24px",
-                        color: "#425466",
+                        color: baseColor.darkGrey,
                         marginBottom: "8px",
                         textAlign: "right",
                         textTransform: "capitalize",
@@ -91,7 +92,7 @@ function SignIn() {
                     </button>
                   </div>
 
-                  <AppButton width="100%" title="Submit" background="#141416" />
+                  <AppButton width="100%" title="Submit" background={baseColor.primaryColor} />
 
                   <div className={styles.AuthFormContent}>
                     <p>
@@ -125,7 +126,7 @@ function SignIn() {
                   <AppButton
                     width="100%"
                     title="Submit"
-                    background="#141416"
+                    background={baseColor.primaryColor}
                     onClick={handleShowOtp}
                   />
                 </div>
@@ -145,7 +146,7 @@ function SignIn() {
                   <AppButton
                     width="100%"
                     title="Verify"
-                    background="#141416"
+                    background={baseColor.primaryColor}
                     onClick={handleResetPassword}
                   />
                   <p className="pt-2 text-center ">Resend Code in 00 : 02</p>
@@ -175,7 +176,7 @@ function SignIn() {
                   <AppButton
                     width="100%"
                     title="Set Password"
-                    background="#141416"
+                    background={baseColor.primaryColor}
                     className="mt-3"
                   />
                 </>

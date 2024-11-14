@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles/section/home/contentSection.module.css";
 import { Col, Row } from "react-bootstrap";
 import AppButton from "../../components/button";
-import ContentImg from "../../assets/home/banner/bannerImg-1.jpeg";
+import baseColor from "../../config/color";
 
 export default function ContentSection({
   contentLeft,
@@ -28,7 +28,7 @@ export default function ContentSection({
             <AppButton
               title={contentLeft.buttonText}
               //   onClick={() => navigate("/")}
-              background="#141416"
+              background={baseColor.primaryColor}
               // to=""
             />
           </Col>
@@ -42,7 +42,7 @@ export default function ContentSection({
             ></div>
         </Col>
         {contentRight && (
-          <Col className="">
+          <Col className="order-first order-md-last">
             <div className={styles.subtitle}>{contentRight.subtitle}</div>
             <h2>{contentRight.title}</h2>
             <p>{contentRight.paragraph}</p>
@@ -57,7 +57,7 @@ export default function ContentSection({
             <AppButton
               title={contentRight.buttonText}
               //   onClick={() => navigate("/")}
-              background="#141416"
+              background={baseColor.primaryColor}
               // to=""
             />
           </Col>
