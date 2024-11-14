@@ -2,6 +2,7 @@ const baseColor = {
   black: "#000",
   white: "#FFFFFF",
   primaryColor: "#0c2340", // buttonBG, heading 
+  lightPrimaryColor: "#001c3d", //for footer gradient
   darkGrey: "#425466", // label color
   lightGrey: "#EDF2F7", //input  background
   webBackground: "",

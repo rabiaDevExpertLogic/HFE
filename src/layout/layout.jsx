@@ -1,6 +1,6 @@
 import { Layout } from "antd";
 import AppHeader from "./header";
-import AppFooter from "./footer";
+import AppFooter2 from "./footer2";
 import { useLocation } from "react-router-dom";
 // import AppHeader from "../components/header";
 // import AppFooter from "../components/footer";
@@ -58,7 +58,7 @@ export default function AppLayout({ children }) {
             backgroundSize: "cover",
           }}
         >
-          {!shouldHideFooter && <AppFooter />}
+          {!shouldHideFooter && <AppFooter2 />}
         </Footer>
       </Layout>
     </>
