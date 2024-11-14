@@ -44,7 +44,7 @@ export default function ContactUs() {
             }}
           >
             <div className={styles.contactBannerContent}>
-              <div className={styles.subtitle}>contact us</div>
+              <div className={styles.subtitle}>Contact Us</div>
               <h2>How Can We Help You .....!</h2>
               <p>Have any questions?</p>
             </div>
@@ -58,27 +58,42 @@ export default function ContactUs() {
                 <div className={styles.FormInputDiv}>
                   <InputField
                     horizental={true}
-                    label="E-mail or phone number:"
+                    label="Full Name :"
                     type="text"
-                    placeholder="Email ID"
+                    placeholder="Enter Your Name*"
                     required="true"
                     className="w-100"
                   />
                   <InputField
                     horizental={true}
-                    label="E-mail or phone number:"
+                    label="E-mail:"
                     type="text"
-                    placeholder="Email ID"
+                    placeholder="Enter Your Email*"
                     required="true"
                     className="w-100"
                   />
                   <TextArea
                     horizental={true}
-                    label="organization Products:"
+                    label="Message:"
                     type="text"
-                    placeholder="Please enter a describtion"
+                    placeholder="Enter Your Message*"
                     required="true"
                   />
+                  <div
+                    style={{
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      fontSize: "14px",
+                      lineHeight: "24px",
+                      color: baseColor.darkGrey,
+                      margin: "auto 0px",
+                      textTransform: "capitalize",
+                      width: "250px",
+                      paddingBottom: "8px",
+                    }}
+                  >
+                    ReCaptcha:
+                  </div>
                   <ReCAPTCHA
                     sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                     ref={recaptcha}
@@ -99,8 +114,8 @@ export default function ContactUs() {
                 <div className={styles.info}>
                   <HiOutlineLocationMarker className={styles.infoSvg} />
                   <h5>
-                      3515 Sycamore School Road, Suite <br/> 125 - PMB 172 Fort Worth,
-                    TX 76133
+                    3515 Sycamore School Road, Suite <br /> 125 - PMB 172 Fort
+                    Worth, TX 76133
                   </h5>
                 </div>
                 <div className={styles.info}>
